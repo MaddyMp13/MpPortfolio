@@ -78,6 +78,27 @@ gsap.fromTo(".form-wrap",
 )
 
 
+// Skills
+gsap.from(".skills-wrapper-1", {
+    x: -120,
+    duration: 1,
+    stagger: 0.2,
+
+})
+
+gsap.from(".skills-wrapper-2", {
+    x: 120,
+    duration: 1,
+})
+
+gsap.from(".skill-wrap", {
+    x: 30,
+    duration: 1,
+    stagger: 0.2,
+    delay: 1.2
+})
+
+
 /* PROJECT CARDS */
 gsap.utils.toArray(".project-card").forEach((card) => {
 

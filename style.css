@@ -54,12 +54,12 @@
  nav ul li {
      list-style: none;
      cursor: pointer;
+     transition: 0.5s ease-out;
  }
 
- nav ul li:hover {
+ /* nav ul li:hover {
      transform: rotateX(360deg);
-     transition: 1s ease-out;
- }
+ } */
 
 
  nav ul li a {
@@ -162,7 +162,7 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     padding: 60px 20px;
+     /* padding: 60px 20px; */
  }
 
  .about-container {
@@ -170,6 +170,66 @@
      margin: auto;
      text-align: center;
  }
+
+
+ /* skills */
+ .skills {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     /* padding: 60px 20px; */
+ }
+
+ .skill {
+     color: #fff;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 18px 50px;
+     margin-bottom: 20px;
+     /* background-color: rgb(15, 150, 143); */
+     background: linear-gradient(to right, #084947, #0f968f, #1db3ab);
+     /* border-radius: 0px 60px 60px 0px; */
+ }
+
+ .skill-wrap {
+     position: relative;
+ }
+
+
+ .skill-val {
+     color: #000;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: rgb(192, 192, 192);
+     width: 65px;
+     height: 65px;
+     box-shadow: 5px -5px 10px black;
+     position: absolute;
+     left: 0;
+     transform: translate(-50%) rotate(45deg);
+     z-index: 1;
+ }
+
+ .skill-val p {
+     transform: rotate(-45deg);
+ }
+
+ .triangle-clip {
+     height: 65px;
+     width: 65px;
+     padding: 15px;
+     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 50% 51%);
+     background-color: #1db3ab;
+     position: absolute;
+     right: 0;
+     z-index: 2;
+     transform: translateX(49%);
+ }
+
+
 
  /* PROJECTS */
 
