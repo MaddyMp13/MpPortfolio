@@ -77,6 +77,14 @@ gsap.fromTo(".form-wrap",
     }
 )
 
+// About
+
+gsap.from(".about-text", {
+    y: 100,
+    // rotationY: -50,
+    opacity: 0,
+    duration: 1.5,
+})
 
 // Skills
 gsap.from(".skills-wrapper-1", {
@@ -96,6 +104,24 @@ gsap.from(".skill-wrap", {
     duration: 1,
     stagger: 0.2,
     delay: 1.2
+})
+
+gsap.fromTo(".circle-outer", {
+    rotation: 0,
+}, {
+    rotation: 360,
+    ease: "power2.inOut",
+    delay: 1.5,
+    duration: 5,
+})
+
+gsap.fromTo(".circle", {
+    rotation: 360,
+}, {
+    rotation: 0,
+    ease: "power2.inOut",
+    delay: 1.5,
+    duration: 5,
 })
 
 
