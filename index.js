@@ -81,10 +81,15 @@ gsap.fromTo(".form-wrap",
 
 gsap.from(".about-text", {
     y: 100,
-    // rotationY: -50,
     opacity: 0,
     duration: 1.5,
-})
+    ease: "power3.out",
+    scrollTrigger: {
+        trigger: ".about-text",
+        stagger: 0.6,
+        start: "top 55%",
+    }
+});
 
 // Skills
 gsap.from(".skills-wrapper-1", {
