@@ -20,7 +20,7 @@
  /* SECTIONS */
  .section {
      min-height: 100vh;
-     padding: 50px 20px 0;
+     padding: 20px 20px 50px;
  }
 
  /* NAVBAR */
@@ -207,6 +207,8 @@
      display: flex;
      align-items: center;
      justify-content: center;
+     padding: 70px 0px 50px;
+
      /* background-color: red; */
  }
 
@@ -256,17 +258,22 @@
      background-image:
          radial-gradient(#333333 01px, transparent 1px);
      background-size: 35px 35px;
+     padding: 70px 0;
+
  }
 
  .project-grid {
-     display: grid;
-     justify-items: center;
-     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     display: flex;
+     flex-wrap: wrap;
+     gap: 50px;
      margin-top: 40px;
+     justify-content: center;
+     /* centers rows */
  }
 
  .project-card {
-     max-width: 330px;
+     flex: 1 1 350px;
+     max-width: 350px;
      display: flex;
      flex-direction: column;
      justify-content: space-between;

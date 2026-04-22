@@ -28,6 +28,8 @@ if (localStorage.getItem("theme") === "dark") {
 }
 
 
+
+
 gsap.from(".toggle-btn",
     { rotate: 360, duration: 2, opacity: 0 })
 
@@ -92,42 +94,41 @@ gsap.from(".about-text", {
 });
 
 // Skills
-gsap.from(".skills-wrapper-1", {
-    x: -120,
-    duration: 1,
-    stagger: 0.2,
 
-})
+const cards = document.querySelectorAll(".skill-card");
 
-gsap.from(".skills-wrapper-2", {
-    x: 120,
-    duration: 1,
-})
+cards.forEach(card => {
+    card.addEventListener("mouseenter", () => {
+        gsap.to(card, {
+            scale: 1.1,
+            y: -10,
+            duration: 0.3,
+            ease: "power2.out"
+        });
+    });
 
-gsap.from(".skill-wrap", {
-    x: 30,
-    duration: 1,
-    stagger: 0.2,
-    delay: 1.2
-})
+    card.addEventListener("mouseleave", () => {
+        gsap.to(card, {
+            scale: 1,
+            y: 0,
+            duration: 0.3
+        });
+    });
+});
 
-gsap.fromTo(".circle-outer", {
-    rotation: 0,
-}, {
-    rotation: 360,
-    ease: "power2.inOut",
-    delay: 1.5,
-    duration: 5,
-})
+gsap.from(".skill-card i", {
+    y: -20,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.4,
+    ease: "bounce.out",
+    scrollTrigger: {
+        trigger: ".skill-wrap",
+        start: "top 80%"
+    }
+});
 
-gsap.fromTo(".circle", {
-    rotation: 360,
-}, {
-    rotation: 0,
-    ease: "power2.inOut",
-    delay: 1.5,
-    duration: 5,
-})
+
 
 
 /* PROJECT CARDS */
