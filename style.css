@@ -55,11 +55,12 @@
      align-items: center;
      justify-content: space-between;
      padding: 0 8%;
+
  }
 
  nav ul {
      display: flex;
-     gap: 20px;
+     gap: 50px;
  }
 
 
@@ -67,6 +68,7 @@
      list-style: none;
      cursor: pointer;
      transition: 0.5s ease-out;
+
  }
 
  /* nav ul li:hover {
@@ -74,7 +76,7 @@
  } */
 
  nav ul li a {
-     font-size: 18px;
+     font-size: 20px;
      text-decoration: none;
      color: inherit;
  }
@@ -85,6 +87,7 @@
      outline: none;
      border: none;
      font-size: 25px;
+
  }
 
  .dark {
@@ -104,6 +107,20 @@
      color: #fff;
  }
 
+ .dark .logo-img {
+     filter: invert(1);
+ }
+
+ .dark .skill-card {
+     box-shadow: 1px 4px 10px rgba(0, 255, 255, 0.3);
+ }
+
+ .dark .experience-wrap {
+     box-shadow: 1px 4px 10px rgba(0, 255, 255, 0.3);
+ }
+
+
+
  .dark .projects {
      background-image:
          radial-gradient(white 01px, transparent 1px);
@@ -114,18 +131,11 @@
      background: #1F2937;
      border: 1px solid #374151;
      border-radius: 12px;
-     box-shadow: 15px 15px 20px rgba(182, 182, 182, 0.1);
- }
-
- .dark .form-wrap {
-     background: #535353;
-     border: 1px solid #374151;
-     color: #fff;
-     box-shadow: 0px 0px 5px #4d4d4d;
+     box-shadow: 10px 10px 25px rgba(182, 182, 182, 0.2)
  }
 
  .dark .contact {
-     filter: brightness(0.4) contrast(1);
+     filter: brightness(0.8) contrast(1);
      opacity: 1;
      transition: all 1s ease;
  }
@@ -139,7 +149,6 @@
      text-align: center;
      background-image: url(./asset/hero-img.png);
      background-position: left top;
-
      /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
      color: white;
      /* min-height: calc(100vh + 70px); */
@@ -249,6 +258,18 @@
      font-size: 92px;
  }
 
+
+ /* Experience */
+ .experience-wrap {
+     width: 70%;
+     padding: 50px 20px;
+     border-radius: 16px;
+     box-shadow: 0 4px 30px rgba(138, 134, 134, 0.4);
+     backdrop-filter: blur(1px);
+     -webkit-backdrop-filter: blur(5px);
+     border: 1px solid rgba(255, 255, 255, 0.3);
+     text-align: center;
+ }
 
 
  /* PROJECTS */
@@ -452,8 +473,6 @@
 
 
  @media screen and (max-width:425px) {
-
-
      .menu {
          display: none;
      }
@@ -463,11 +482,10 @@
      }
 
      .hamburger button {
-         background-color: #0F172A;
+         background-color: #4f74a7;
          padding: 5px 10px;
          color: #fff;
          border: none;
-
      }
 
      .navbar {
@@ -475,17 +493,31 @@
          position: relative;
      }
 
+     nav ul {
+         gap: 20px;
+     }
+
+     nav ul li a {
+         font-size: 16px;
+     }
+
      .mobmenu {
-         transition: all 2s ease;
-         padding: 20px;
+         padding: 20px 0;
          position: absolute;
-         top: 80%;
-         right: 3%;
-         width: auto;
+         top: 30%;
+         right: 10%;
      }
 
      .mobmenu ul {
          flex-direction: column;
+     }
+
+     .hero {
+         background-position: center top !important;
+     }
+
+     .skill-card, .skill-wrap {
+         width: 75% !important;
      }
 
  }

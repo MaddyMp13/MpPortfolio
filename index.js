@@ -120,7 +120,7 @@ gsap.from(".skill-card i", {
     y: -20,
     opacity: 0,
     duration: 0.6,
-    stagger: 0.4,
+    stagger: 0.3,
     ease: "bounce.out",
     scrollTrigger: {
         trigger: ".skill-wrap",

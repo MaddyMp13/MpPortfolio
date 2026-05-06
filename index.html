@@ -16,13 +16,16 @@
     <div class="main-wrap">
         <div class="nav-wrap">
             <nav class="navbar">
-                <h2>Mandar Patil</h2>
+                <!-- <h2>Mandar Patil</h2> -->
+                <a href="#hero"><img class="logo-img" src="./asset/logo.png" alt="" width="80px"
+                        style="margin: 10px 0 0 0;"></a>
 
                 <div class="menu">
                     <ul>
                         <li><a class="li" href="#hero">Home</a></li>
                         <li><a class="li" href="#about">About</a></li>
                         <li><a class="li" href="#skills">Skills</a></li>
+                        <li><a class="li" href="#experience">Experience</a></li>
                         <li><a class="li" href="#projects">Projects</a></li>
                         <li><a class="li" href="#contact">Contact</a></li>
                     </ul>
@@ -107,7 +110,7 @@
 
 
         <!-- SKILLS -->
-        <section class="skills section" id="skills">
+        <section class="skills section" id="skills" style=" padding-top: 100px;">
             <div class="skill-wrap">
                 <h2 style=" color: #FFA500;">Technical Skills</h2>
                 <p style="margin-bottom: 50px;">
@@ -185,6 +188,46 @@
                 </div>
             </div>
 
+        </section>
+
+
+        <!-- Experience -->
+        <section class="experience section" id="experience"
+            style="display: flex;justify-content: center; padding-top: 100px;">
+
+            <div class="skill-wrap"
+                style="text-align: center; display: flex; flex-direction:column; align-items: center; ">
+                <h2 style="margin-bottom: 50px; color: #FFA500; ">My Experiences</h2>
+
+                <div class="experience-wrap" style="width: 90%; margin-bottom: 50px;">
+                    <div class="experience-card">
+                        <h4>JAN 2025 - PRESENT DAY</h4>
+                        <p>Web Developer at Arkentech Solutions Pvt Ltd</p>
+                        <p>
+                            Designed and developed responsive landing pages to support
+                            marketing campaigns and product launches.
+                            Maintained and updated company website to ensure optimal
+                            performance, security, and user experience.
+                            Utilized technologies such as HTML, CSS, JavaScript, and CMS
+                            platforms to deliver web solutions on time.
+                            Collaborated with designers and content teams to implement UI/UX
+                            improvements
+                        </p>
+                    </div>
+                </div>
+
+                <div class="experience-wrap" style="width: 90%;">
+                    <div>
+                        <h4>MAY 2024 - AUG 2024</h4>
+                        <p>Wordpress Developer Intern in WPGenious Solutions Pvt Ltd</p>
+                        <p>Developed and customized WordPress websites, themes, and plugins
+                            based on client requirements.
+                            Ensured mobile responsiveness, fast load times, and SEO best
+                            practices across allprojects.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
 
@@ -266,11 +309,13 @@
 
             <div class="form-wrap">
                 <h2>Contact Me</h2>
-                <form action="https://google.com" class="contact-form">
+                <form action="https://formspree.io/f/xgodzvno" method="post" class="contact-form">
 
-                    <input type="text" placeholder="Your Name*" required>
-                    <input type="email" placeholder="Your Email*" required>
-                    <textarea placeholder="Your Message"></textarea>
+                    <input type="text" name="fullname" placeholder="Your Name*" required>
+
+                    <input type="email" name="email" placeholder="Your Email*" required>
+
+                    <textarea name="message" placeholder="Your Message"></textarea>
 
                     <button class="btn-grad" type="submit">
                         Send Message
