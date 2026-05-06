@@ -86,10 +86,11 @@ gsap.from(".about-text", {
     opacity: 0,
     duration: 1.5,
     ease: "power3.out",
+    // stagger: 0.6, // ✅ correct place
     scrollTrigger: {
         trigger: ".about-text",
-        stagger: 0.6,
         start: "top 55%",
+        toggleActions: "play none none reverse", // ✅ correct place
     }
 });
 
@@ -121,26 +122,41 @@ gsap.from(".skill-card i", {
     opacity: 0,
     duration: 0.6,
     stagger: 0.3,
+
     ease: "bounce.out",
     scrollTrigger: {
         trigger: ".skill-wrap",
-        start: "top 80%"
+        start: "top 50%",
+        toggleActions: "play none none reverse", // ✅ correct place
+    }
+});
+
+// Experience 
+
+gsap.from(".experience-wrap ", {
+    x: 50,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.8,
+    scrollTrigger: {
+        trigger: ".experience-wrap",
+        start: "top 50%",
+        toggleActions: "play none none reverse", // ✅ correct place
     }
 });
 
 
 
-
 /* PROJECT CARDS */
 gsap.utils.toArray(".project-card").forEach((card) => {
-
     gsap.from(card, {
         y: 40,
         opacity: 0,
         duration: .8,
         scrollTrigger: {
             trigger: card,
-            start: "top 85%"
+            start: "top 50%",
+            toggleActions: "play none none reverse", // ✅ correct place
         }
     });
 
@@ -155,7 +171,7 @@ gsap.utils.toArray(".section").forEach((section) => {
         duration: 1,
         scrollTrigger: {
             trigger: section,
-            start: "top 85%"
+            start: "top 20%"
         }
     });
 
